@@ -1884,3 +1884,17 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+
+/*--------------------------------------------------------------
+# Table Style
+--------------------------------------------------------------*/
+/* 셀 높이 극소화 */
+.spec-table td,
+.spec-table th {
+  padding: 1px 6px !important;   /* Bootstrap 기본 padding 제거 */
+  line-height: 1.1 !important;   /* 줄간격 축소 */
+  font-size: 13px;              /* 글자 약간 작게 */
+  vertical-align: middle;
+}
+

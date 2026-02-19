@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>대형 디스플레이 경보창 ZERA-DSPANN2601</title>
+  <title>ZERA-DSPANN2601 | 대형 디스플레이 알람 경보창</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -142,7 +142,7 @@
               </p>              
               <b>• Software</b><br>
               <ul class="ms-2">
-                - AlarmDataLink:<span style="color: #999999;"> 제어 설비(DCS/PLC)의 경보 데이터 수집 및 AlarmLampMaster에 전송</span><br>
+                - AlarmDataLink:<span style="color: #999999;"> 제어 설비(DCS/PLC)의 경보 데이터 수집 및 AlarmDisplayMaster에 전송</span><br>
                 - AlarmDisplayMaster:<span style="color: #999999;"> AlarmDataLink로 부터 수신된 경보 신호를 각 대형 화면에 전송</span><br>
               </ul>
               <b>• Hardware</b><br>
@@ -160,11 +160,536 @@
               <h3>Software Specifications</h3>
               <h5><span style="color: #526F99;">AlarmDataLink</span></h5>
               <img src="assets/img/AlarmDataLink.png" alt="" class="img-fluid services-img">
-              <img src="assets/img/Spec-AlarmDataLink.png" alt="" class="img-fluid services-img">
-              <br><br>
+
+              <!-- AlarmDataLink Spectification 표 시작 -->
+              <!--------------------------------->
+              <p class="mb-1">
+                <b>실행 환경 및 경보 시퀀스</b>
+              </p>
+              <div class="table-responsive">
+
+                <table class="table table-bordered table-sm spec-table">
+
+                  <!-- 헤더 -->
+                  <thead class="table-light text-center">
+                    <tr>
+                      <th style="width: 20%;">분류</th>
+                      <th style="width: 25%;">항목</th>
+                      <th style="width: 55%;">규격</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+
+                    <!-- 공통 -->
+                    <tr>
+                      <td rowspan="5" class="text-center fw-bold">실행</td>
+                      <td>운영체제</td>
+                      <td>Microsoft Windows 10, 11</td>
+                    </tr>
+                    <tr>
+                      <td>다중 실행</td>
+                      <td>차단</td>
+                    </tr>
+                    <tr>
+                      <td>Log(Alarm Source)</td>
+                      <td>1,000line</td>
+                    </tr>                    
+                    <tr>
+                      <td>Log(Alarm Output)</td>
+                      <td>1,000line</td>
+                    </tr>  
+                    <tr>
+                      <td>경보 Sequence</td>
+                      <td>ANSI/ISA S18.1 SEQUENCE R-1-2-9</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!--------------------------------->
+              <p class="mb-1">
+                <b>경보 Tag</b>
+              </p>
+              <div class="table-responsive">
+
+                <table class="table table-bordered table-sm spec-table">
+
+                  <!-- 헤더 -->
+                  <thead class="table-light text-center">
+                    <tr>
+                      <th style="width: 20%;">분류</th>
+                      <th style="width: 25%;">항목</th>
+                      <th style="width: 55%;">규격</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+
+                    <!-- 공통 -->
+                    <tr>
+                      <td rowspan="4" class="text-center fw-bold">경보 Tag 설정</td>
+                      <td>Format</td>
+                      <td>csv format 파일 (ANSI/UTF-8)</td>
+                    </tr>
+                    <tr>
+                      <td>Tag Name</td>
+                      <td>200byte</td>
+                    </tr>
+                    <tr>
+                      <td>Lamp Name</td>
+                      <td>50byte</td>
+                    </tr>                    
+                    <tr>
+                      <td>Lamp Color</td>
+                      <td>6 (Red, Orange, Yellow, Green, Blue, White)</td>
+                    </tr>  
+
+                  </tbody>
+                </table>
+              </div>
+
+              <!--------------------------------->
+              <p class="mb-1">
+                <b>경보 수집</b>
+              </p>
+              <div class="table-responsive">
+
+                <table class="table table-bordered table-sm spec-table">
+
+                  <!-- 헤더 -->
+                  <thead class="table-light text-center">
+                    <tr>
+                      <th style="width: 20%;">분류</th>
+                      <th style="width: 25%;">항목</th>
+                      <th style="width: 55%;">규격</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+
+                    <!-- 공통 -->
+                    <tr>
+                      <td rowspan="7" class="text-center fw-bold">경보 데이터 수집</td>
+                      <td>네트워크</td>
+                      <td>Ethernet</td>
+                    </tr>
+                    <tr>
+                      <td>Protocol</td>
+                      <td>MODBUS TCP</td>
+                    </tr>
+                    <tr>
+                      <td>Alarm Source 접속</td>
+                      <td>실행 시 자동 접속 및 자동 재접속</td>
+                    </tr>                    
+                    <tr>
+                      <td>자동 재접속 시도 주기</td>
+                      <td>10sec</td>
+                    </tr> 
+                    <tr>
+                      <td>수집 가능 Tag 수</td>
+                      <td>65,535Tag (max)</td>
+                    </tr>
+                    <tr>
+                      <td>회당 요청 데이터 수</td>
+                      <td>125개/회 max. (MODBUS 제약사항)</td>
+                    </tr>                    
+                    <tr>
+                      <td>수집 속도</td>
+                      <td>Alarm Source의 성능에 따라 사용자 설정</td>
+                    </tr>                       
+
+                  </tbody>
+                </table>
+              </div>
+
+              <!--------------------------------->
+              <p class="mb-1">
+                <b>경보 데이터 출력 전송</b>
+              </p>
+              <div class="table-responsive">
+
+                <table class="table table-bordered table-sm spec-table">
+
+                  <!-- 헤더 -->
+                  <thead class="table-light text-center">
+                    <tr>
+                      <th style="width: 20%;">분류</th>
+                      <th style="width: 25%;">항목</th>
+                      <th style="width: 55%;">규격</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+
+                    <!-- 공통 -->
+                    <tr>
+                      <td rowspan="2" class="text-center fw-bold">공통</td>
+                      <td>전송 방식</td>
+                      <td>FILE, TCP, UDP, SERIAL (복수 선택 가능)</td>
+                    </tr>
+                    <tr>
+                      <td>전송 속도</td>
+                      <td>경보 데이터 수집 속도에 종속</td>
+                    </tr>
+
+                    <!-- FILE -->
+                    <tr>
+                      <td rowspan="2" class="text-center fw-bold">FILE</td>
+                      <td>형식</td>
+                      <td>Text File</td>
+                    </tr>
+                    <tr>
+                      <td>파일 설정</td>
+                      <td>Path + File name 사용자 설정</td>
+                    </tr>
+
+                    <!-- TCP -->
+                    <tr>
+                      <td rowspan="3" class="text-center fw-bold">TCP 양방향 통신</td>
+                      <td>연결 관계</td>
+                      <td>AlarmDataLink(Server) ↔ (Client) 데이터 수신측</td>
+                    </tr>
+                    <tr>
+                      <td>Protocol</td>
+                      <td>UNIANN TCP Protocol</td>
+                    </tr>
+                    <tr>
+                      <td>최대 접속</td>
+                      <td>5 Client</td>
+                    </tr>
+
+                    <!-- UDP -->
+                    <tr>
+                      <td rowspan="8" class="text-center fw-bold">UDP 물리적 단방향 통신</td>
+                      <td>연결 관계</td>
+                      <td>AlarmDataLink(Client) → (Server) 데이터 수신측</td>
+                    </tr>
+                    <tr>
+                      <td>Cable</td>
+                      <td>UNIANN UDP Unidirectional Cable</td>
+                    </tr>
+                    <tr>
+                      <td>Protocol</td>
+                      <td>UNIANN Protocol</td>
+                    </tr>
+                    <tr>
+                      <td>Error Recovery</td>
+                      <td>UNIANN Error Recovery Algorithm</td>
+                    </tr> 
+                    <tr>
+                      <td>Error 발생 확률</td>
+                      <td>≤ 8.47 x 10<sup>-145</sup> (0%에 수렴)</td>
+                    </tr> 
+                    <tr>
+                      <td>전송속도</td>
+                      <td>10 / 100 / 1000 Mbps</td>
+                    </tr>
+                    <tr>
+                      <td>거리</td>
+                      <td>1m 이내 권장</td>
+                    </tr>
+                    <tr>
+                      <td>접속 수</td>
+                      <td>최대 2대 (데이터 수신측)</td>
+                    </tr>                    
+
+                    <!-- SERIAL -->
+                    <tr>
+                      <td rowspan="12" class="text-center fw-bold">SERIAL 물리적 단방향 통신</td>
+                      <td>연결 관계</td>
+                      <td>AlarmDataLink(Master) → (Slave) 데이터 수신측</td>
+                    </tr>
+
+                      <td>Cable</td>
+                      <td>UNIANN RS232 Unidirectional Cable<br>
+                         UNIANN RS422 Unidirectional Cable</td>                      
+                    </tr> 
+                    <tr>
+                      <td>Protocol</td>
+                      <td>UNIANN Protocol</td>
+                    </tr>
+                    <tr>
+                      <td>COM Port</td>
+                      <td>사용자 설정</td>
+                    </tr>                                                           
+                    <tr>
+                      <td>Baudrate</td>
+                      <td>300 ~ 115200bps</td>
+                    </tr>
+                    <tr>
+                      <td>Data-Parity-Stop bit</td>
+                      <td>8-N-1</td>
+                    </tr>                    
+                    <tr>
+                      <td>Error Recovery</td>
+                      <td>UNIANN Error Recovery Algorithm</td>
+                    </tr>
+                    <tr>
+                      <td>Error 발생 확률</td>
+                      <td>≤ 5.89 x 10<sup>-97</sup> (0%에 수렴)</td>
+                    </tr>                     
+                    <tr>
+                      <td>거리</td>
+                      <td>RS232: 15m / RS422: 1.2km</td>
+                    </tr>
+                    <tr>
+                      <td>접속 수</td>
+                      <td>최대 32대(데이터 수신측)</td>                    
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+              </div>
+              <!-- AlarmDataLink Spectification 표 끝 -->
+
+              <br>
+              <br>
               <h5><span style="color: #526F99;">AlarmDisplayMaster</span></h5>
-              <img src="assets/img/AlarmLampMaster.png" alt="" class="img-fluid services-img">
-              <img src="assets/img/Spec-AlarmLampMaster.png" alt="" class="img-fluid services-img">
+
+              <!-- AlarmDisplayMaster Spectification 표 시작 -->
+              <!--------------------------------->
+              <p class="mb-1">
+                <b>실행 환경 및 경보 시퀀스</b>
+              </p>
+              <div class="table-responsive">
+
+                <table class="table table-bordered table-sm spec-table">
+
+                  <!-- 헤더 -->
+                  <thead class="table-light text-center">
+                    <tr>
+                      <th style="width: 20%;">분류</th>
+                      <th style="width: 25%;">항목</th>
+                      <th style="width: 55%;">규격</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+
+                    <!-- 실행 환경 -->
+                    <tr>
+                      <td rowspan="3" class="text-center fw-bold">실행 환경</td>
+                      <td>운영체제</td>
+                      <td>Microsoft Windows 10, 11</td>
+                    </tr>
+                    <tr>
+                      <td>다중 실행</td>
+                      <td>차단</td>
+                    </tr>
+                    <tr>
+                      <td>경보 Sequence</td>
+                      <td>ANSI/ISA S18.1 SEQUENCE R-1-2-9</td>
+                    </tr>
+
+                    <!-- 실행 -->
+                    <tr>
+                      <td rowspan="5" class="text-center fw-bold">실행</td>
+                      <td>Lamp Color</td>
+                      <td>6 (Red, Orange, Yellow, Green, Blue, White)</td>
+                    </tr>
+                    <tr>
+                      <td>경보 Tag 명 최대 길이</td>
+                      <td>64byte (화면상 50byte까지만 표시하는 경우도 있음)</td>
+                    </tr>
+                    <tr>
+                      <td>경보 램프명 길이</td>
+                      <td>50byte max.</td>
+                    </tr>
+                    <tr>
+                      <td>Alarm Log 저장</td>
+                      <td>1File/day 생성</td>
+                    </tr>  
+                    <tr>
+                      <td>Alarm Log 저장 여부 설정</td>
+                      <td>사용자 설정</td>
+                    </tr>                                                              
+                  </tbody>
+                </table>
+              </div>
+
+              <!--------------------------------->
+              <p class="mb-1">
+                <b>경보 Tag</b>
+              </p>
+              <div class="table-responsive">
+
+                <table class="table table-bordered table-sm spec-table">
+
+                  <!-- 헤더 -->
+                  <thead class="table-light text-center">
+                    <tr>
+                      <th style="width: 20%;">분류</th>
+                      <th style="width: 25%;">항목</th>
+                      <th style="width: 55%;">규격</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+
+                    <!-- 경보 Tag 설정 -->
+                    <tr>
+                      <td rowspan="4" class="text-center fw-bold">경보 Tag 설정</td>
+                      <td>Format</td>
+                      <td>csv format 파일 (ANSI/UTF-8)</td>
+                    </tr>
+                    <tr>
+                      <td>Tag Name</td>
+                      <td>200byte</td>
+                    </tr>
+                    <tr>
+                      <td>Lamp Name</td>
+                      <td>50byte</td>
+                    </tr>                    
+                    <tr>
+                      <td>Lamp Color</td>
+                      <td>6 (Red, Orange, Yellow, Green, Blue, White)</td>
+                    </tr>  
+
+                  </tbody>
+                </table>
+              </div>
+
+              <!--------------------------------->
+              <p class="mb-1">
+                <b>경보 데이터 수집</b>
+              </p>
+              <div class="table-responsive">
+
+                <table class="table table-bordered table-sm spec-table">
+
+                  <!-- 헤더 -->
+                  <thead class="table-light text-center">
+                    <tr>
+                      <th style="width: 20%;">분류</th>
+                      <th style="width: 25%;">항목</th>
+                      <th style="width: 55%;">규격</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+
+                    <!-- 공통 -->
+                    <tr>
+                      <td rowspan="2" class="text-center fw-bold">데이터 수집</td>
+                      <td>수집 방식</td>
+                      <td>FILE, TCP, UDP, SERIAL (택1)</td>
+                    </tr>
+                    <tr>
+                      <td>수집 속도</td>
+                      <td>FILE 방식 외 수신 속도에 종속</td>
+                    </tr>
+
+                    <!-- FILE -->
+                    <tr>
+                      <td rowspan="3" class="text-center fw-bold">FILE</td>
+                      <td>형식</td>
+                      <td>Text File</td>
+                    </tr>
+                    <tr>
+                      <td>파일 설정</td>
+                      <td>Path + File name 사용자 설정</td>
+                    </tr>
+                    <tr>
+                      <td>주기</td>
+                      <td>사용자 설정</td>
+                    </tr>
+
+                    <!-- TCP 양방향 통신 -->
+                    <tr>
+                      <td rowspan="3" class="text-center fw-bold">TCP 양방향 통신</td>
+                      <td>연결 관계</td>
+                      <td>AlarmDataLink(Server) ↔ (Client)AlarmDisplayMaster</td>
+                    </tr>
+                    <tr>
+                      <td>Protocol</td>
+                      <td>UNIANN TCP Protocol</td>
+                    </tr>
+                    <tr>
+                      <td>자동 재접속 시도 주기</td>
+                      <td>20sec</td>
+                    </tr>
+
+                    <!-- UDP 물리적 단방향 통신 -->
+                    <tr>
+                      <td rowspan="7" class="text-center fw-bold">UDP 물리적 단방향 통신</td>
+                      <td>연결 관계</td>
+                      <td>AlarmDataLink(Client) → (Server)AlarmDisplayMaster</td>
+                    </tr>
+                    <tr>
+                      <td>Cable</td>
+                      <td>UNIANN UDP Unidirectional Cable</td>
+                    </tr>
+                    <tr>
+                      <td>Protocol</td>
+                      <td>UNIANN Protocol</td>
+                    </tr>
+                    <tr>
+                      <td>Error Recovery</td>
+                      <td>UNIANN Error Recovery Algorithm</td>
+                    </tr> 
+                    <tr>
+                      <td>Error 발생 확률</td>
+                      <td>≤ 8.47 x 10<sup>-145</sup> (0%에 수렴)</td>
+                    </tr> 
+                    <tr>
+                      <td>전송속도</td>
+                      <td>10 / 100 / 1000 Mbps</td>
+                    </tr>
+                    <tr>
+                      <td>거리</td>
+                      <td>1m 이내 권장</td>
+                    </tr>
+
+                    <!-- SERIAL 물리적 단방향 통신 -->
+                    <tr>
+                      <td rowspan="9" class="text-center fw-bold">SERIAL 물리적 단방향 통신</td>
+                      <td>연결 관계</td>
+                      <td>AlarmDataLink(Master) → (Slave)AlarmDisplayMaster</td>
+                    </tr>
+
+                      <td>Cable</td>
+                      <td>UNIANN RS232 Unidirectional Cable<br>
+                         UNIANN RS422 Unidirectional Cable</td>                      
+                    </tr> 
+                    <tr>
+                      <td>Protocol</td>
+                      <td>UNIANN Protocol</td>
+                    </tr>
+                    <tr>
+                      <td>COM Port</td>
+                      <td>사용자 설정</td>
+                    </tr>                                                           
+                    <tr>
+                      <td>Baudrate</td>
+                      <td>300 ~ 115200bps</td>
+                    </tr>
+                    <tr>
+                      <td>Data-Parity-Stop bit</td>
+                      <td>8-N-1</td>
+                    </tr>                    
+                    <tr>
+                      <td>Error Recovery</td>
+                      <td>UNIANN Error Recovery Algorithm</td>
+                    </tr>
+                    <tr>
+                      <td>Error 발생 확률</td>
+                      <td>≤ 5.89 x 10<sup>-97</sup> (0%에 수렴)</td>
+                    </tr>                     
+                    <tr>
+                      <td>거리</td>
+                      <td>RS232: 15m / RS422: 1.2km</td>
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+              </div>
+              <!-- AlarmDisplayMaster Spectification 표 끝 -->
+
             </section><!-- End Section soft-spec --> 
 
             <!-- Section hard-spec -->
@@ -174,17 +699,46 @@
               <p class="fst-italic">
                 * 대형 모니터 규격은 현장 및 고객 요구사항에 따라 변경됩니다.
               </p>
-              <br><br>
+
+              <br>
+              <br>
               <h5><span style="color: #526F99;">Switch Panel</span></h5>              
-              <b>• 조작 버튼</b><br>
-              <ul class="ms-2">
-                - SILENCE, ACKNOWLEDGE, RESET, TEST<br>
-              </ul>
-              <b>• 경보음</b><br>
-              <ul class="ms-2">
-                - 경보 발생음<br>
-                - 경보 해제음<br>                  
-              </ul>                  
+              <!-- Switch Panel Spectification 표 시작 -->
+              <!--------------------------------->
+              <div class="table-responsive">
+
+                <table class="table table-bordered table-sm spec-table">
+
+                  <!-- 헤더 -->
+                  <thead class="table-light text-center">
+                    <tr>
+                      <th style="width: 20%;">분류</th>
+                      <th style="width: 25%;">항목</th>
+                      <th style="width: 55%;">규격</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+
+                    <!-- 입력 -->
+                    <tr>
+                      <td rowspan="1" class="text-center fw-bold">입력</td>
+                      <td>조작 버튼</td>
+                      <td>SILENCE, ACKNOWLEDGE, RESET, TEST</td>
+                    </tr>
+
+                    <!-- 출력 -->
+                    <tr>
+                      <td rowspan="1" class="text-center fw-bold">출력</td>
+                      <td>경보음</td>
+                      <td>경보발생음, 경보해제음</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+              <!-- Switch Panel  Spectification 표 끝 -->
+                
             </section><!-- End Section hard-spec -->
             
           </div>

@@ -91,6 +91,9 @@ h6 {
   font-family: 'Michroma', sans-serif;
 }
 
+.uniann {
+  font-family: 'Michroma', sans-serif;
+}
 /* PHP Email Form Messages
 ------------------------------*/
 .php-email-form .error-message {
@@ -1026,13 +1029,15 @@ section,
     font-size: 18px;
   }
 }
-
+/************* 추가한 것 시작 ******************/
 .hero .tm {
   font-size: 0.2em;   /* 글자 크기를 40%로 */
   vertical-align: super; /* 위쪽으로 살짝 올림 */
   position: relative;
   top: -12px;   /* 더 위로 올림 */
 }
+/************** 추가한 것 끝 *******************/
+
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
@@ -1160,13 +1165,14 @@ section,
   margin-bottom: 0;
 }
 
+/************* 추가한 것 시작 ******************/
 .services .details .tm {
   font-size: 0.6em;   /* 글자 크기를 60%로 */
   vertical-align: super; /* 위쪽으로 살짝 올림 */
   position: relative;
   top: 2px;   /* 위치 조정 */
 }
-
+/************** 추가한 것 끝 *******************/
 
 .services .service-item:hover .details h3 {
   color: var(--accent-color);
@@ -1854,6 +1860,26 @@ section,
   font-size: 15px;
 }
 
+/************* 추가한 것 시작 ******************/
+.service-details .btn-link {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-weight: 400;
+  font-size: 18px;
+  text-decoration: none;
+  letter-spacing: 0px;
+  display: inline-block;
+  padding: 5px 30px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.service-details .btn-link:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+/************** 추가한 것 끝 *******************/
+
+
 .service-details ul {
   list-style: none;
   padding: 0;
@@ -1886,9 +1912,14 @@ section,
 }
 
 
-/*--------------------------------------------------------------
+
+
+
+
+/************* 추가한 것 시작 ******************/
+/*---------------------
 # Table Style
---------------------------------------------------------------*/
+---------------------*/
 /* 셀 높이 극소화 */
 .spec-table td,
 .spec-table th {
@@ -1897,4 +1928,4 @@ section,
   font-size: 13px;              /* 글자 약간 작게 */
   vertical-align: middle;
 }
-
+/************** 추가한 것 끝 *******************/

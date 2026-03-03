@@ -26,19 +26,19 @@
   </url>
 
   <url>
-    <loc>https://zerasys.com/uniann-c2310</loc>
-    <lastmod>2026-02-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
     <loc>https://zerasys.com/uniann-d2601</loc>
     <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://zerasys.com/zera-lcdannc2310</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
   <!-- Solutions -->
   <url>
     <loc>https://zerasys.com/solution-aov</loc>

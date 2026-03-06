@@ -1,4 +1,13 @@
+User-agent: Googlebot
+Disallow:
+
+User-agent: Naverbot
+Disallow:
+
+User-agent: Daumbot
+Disallow:
+
 User-agent: *
-Allow: /
+Disallow: /assets/
 
 Sitemap: https://zerasys.com/sitemap.xml

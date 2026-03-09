@@ -7,6 +7,18 @@ Disallow:
 User-agent: Daumbot
 Disallow:
 
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
 User-agent: *
 Disallow: /assets/
 

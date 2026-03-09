@@ -13,9 +13,6 @@ Allow: /
 User-agent: Slurp
 Allow: /
 
-User-agent: Baiduspider
-Allow: /
-
 User-agent: YandexBot
 Allow: /
 

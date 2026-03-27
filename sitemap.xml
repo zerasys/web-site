@@ -11,7 +11,7 @@
 
   <!-- UNIANN Main -->
   <url>
-    <loc>https://zerasys.com/uniann</loc>
+    <loc>https://zerasys.com/uniann.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -19,21 +19,21 @@
 
   <!-- UNIANN Products -->
   <url>
-    <loc>https://zerasys.com/uniann-w2310</loc>
+    <loc>https://zerasys.com/uniann-w2310.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://zerasys.com/uniann-d2601</loc>
+    <loc>https://zerasys.com/uniann-d2601.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://zerasys.com/zera-lcdannc2310</loc>
+    <loc>https://zerasys.com/zera-lcdann2310.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -41,28 +41,28 @@
   
   <!-- Solutions -->
   <url>
-    <loc>https://zerasys.com/solution-aov</loc>
+    <loc>https://zerasys.com/solution-aov.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://zerasys.com/solution-relay</loc>
+    <loc>https://zerasys.com/solution-relay.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://zerasys.com/solution-pcb</loc>
+    <loc>https://zerasys.com/solution-pcb.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://zerasys.com/solution-lpg</loc>
+    <loc>https://zerasys.com/solution-lpg.html</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

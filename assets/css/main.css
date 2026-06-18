@@ -1917,4 +1917,17 @@ section,
   font-size: 13px;              /* 글자 약간 작게 */
   vertical-align: middle;
 }
+
+/* 공통 유틸리티: 화면에서 숨기기 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 /************** 추가한 것 끝 *******************/
